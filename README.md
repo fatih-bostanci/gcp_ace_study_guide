@@ -20,6 +20,7 @@
   - [ ] Cloud Router
   - [ ] Load Balancing
   - [ ] Osi model
+  - [ ] DNS
   - [ ] Interconnection and Peering
   - [ ] VPN
   - [ ] Firewalls
