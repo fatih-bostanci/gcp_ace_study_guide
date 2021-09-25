@@ -46,7 +46,7 @@ See [2] to read more about machine familes.
 
 Depending on the chosen family you can pick a **Series** . See [3] for the details.
 
-Finally you pick the concrete **Machine type** of your VM
+Finally you pick the concrete **Machine type** of your VM, which determines the number of CPUs and working memory of your machine.
 
 Clicking on **CPU platform and GPU** expands further configuration options
 
@@ -70,9 +70,28 @@ You can also provide a container image. We will talk more about containers in th
 
 ---
 
-The boot disk contains the operating system of your machine.
+The boot disk contains the operating system of your machine. Some OS like linux are free, whereas Windows based OS incur further costs.
 
-Some OS like linux are free, whereas Windows based OS incur further costs.
+Clicking on *"change"* lets you configure your bood disk.
+
+![image-20210925144310507](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925144310507.png)
+
+You can create a new disk from custom and public images and snapshots. Alternatively you can attach a disk you have created earlier but didn't attach to another VM. The focus here is on creating new disks from public images.
+
+When going with a public image, you can choose from a range of Linux and Windows operating systems. Keep in mind that some OS are not free !
+
+You also have to pick a disk type and how much space in gigabyte you want the disk to have.
+
+The available disk types are:
+
+1. Balanced persistent disk
+2. Extreme persistent disk
+3. SSD persistent disk
+4. Standard persistent disk
+
+Again, we will go into more details in the respective chapter about block storage. Clicking on "Show Advanced Configuration" allows you to decide whether the disk should be deleted if the attached VM is deleted, who manages encryption keys and if you want to give the disk a name
+
+![image-20210925191409546](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925191409546.png)
 
 ## Hands On: Create VMs
 
@@ -84,11 +103,11 @@ Some OS like linux are free, whereas Windows based OS incur further costs.
 
 You can read the details of each command with all possible flags in the official documentation.
 
-| Commands                                      | Description  |
-| --------------------------------------------- | ------------ |
-| gcloud compute instances create INSTANCE_NAME | Creates a VM |
-|                                               |              |
-|                                               |              |
+| Commands                                                     | Description                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| gcloud compute instances create INSTANCE_NAME                | Creates a VM                                           |
+| gcloud compute instances set-disk-auto-delete --zone=ZONE VM_NAME | Turn off auto-delete for the boot disk of the given VM |
+|                                                              |                                                        |
 
 
 

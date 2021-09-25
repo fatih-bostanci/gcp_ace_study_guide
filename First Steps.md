@@ -6,6 +6,16 @@
 
 Console, Shell, REST, Apps
 
+## GCP Free Trial and Free Tier
+
+
+
+## Regions and Zones
+
+If a zone becomes unavailable, so will zonal resources in that zone.
+
+You can find a map with all current GCP data centers in the [official docs](#gcp_locations).
+
 ## Projects
 
 Projects are where you organize your Cloud resources and receive bills.
@@ -37,4 +47,6 @@ Projects are where you organize your Cloud resources and receive bills.
 [Free Tier]: https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits
 
 [GCP Free Tier Usage LImits](https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits)
+
+2. [<a name="gcp_locations">GCP locations</a>] https://cloud.google.com/about/locations
 
