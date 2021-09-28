@@ -6,11 +6,22 @@
 
 1. Section: First Steps
 2. Section: Computer Networks
-3. Section: Storage options
-4. Section: Databases
-5. Section: Kubernetes
-6. Section: Platform as a Service
-7. Section: Software as a service in GCP
+   * VMs
+   * Instance Groups
+   * Networks, firewalls
+   * Kubernetes clusters
+3. App hosting
+   * App engine: standard and flexible
+   * Cloud functions
+   * Cloud run
+   * App hosting on Compute engine and Kubernetes Engine
+4. Section: Storage options
+   * Block Storage
+   * File Storage
+   * Object Storage 
+   * Caches
+5. Section: Databases
+6. Section: Software as a service in GCP
 
 
 

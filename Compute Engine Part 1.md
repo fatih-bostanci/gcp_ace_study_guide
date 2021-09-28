@@ -21,7 +21,7 @@ Go to: **Navigation > Compute Engine > VM instances > Create instance**
 
 ![goto_vm_instances](C:\Users\fatih.bostanci\Desktop\GCP_ACE_Unofficial_Study_Guide\Gifs\goto_vm_instances.gif) 
 
----
+### Name, Labels, Region, Zone, Machine Configuration
 
 ![image-20210918182503837](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210918182503837.png)
 
@@ -50,7 +50,11 @@ Finally you pick the concrete **Machine type** of your VM, which determines the 
 
 Clicking on **CPU platform and GPU** expands further configuration options
 
+---
+
 ![image-20210920152913842](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210920152913842.png)
+
+---
 
 Depending on the **machine type** you may further specify the micro-architecture of your machine and add GPUs. If you want to use a display device and a GPU is overkill, you can *"turn on display device"* instead [4]
 
@@ -64,6 +68,8 @@ For some machine types you can turn on *"Confidential VM service"* which will en
 
 You can also provide a container image. We will talk more about containers in the Docker chapter, thus we'll skip the container options for now. What you should know for now is that checking the container box will limit your options when choosing a **boot disk**, which comes next.
 
+### Boot Disk
+
 ---
 
 ![image-20210920154310306](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210920154310306.png)
@@ -72,11 +78,17 @@ You can also provide a container image. We will talk more about containers in th
 
 The boot disk contains the operating system of your machine. Some OS like linux are free, whereas Windows based OS incur further costs.
 
-Clicking on *"change"* lets you configure your bood disk.
+Clicking on *"change"* lets you configure your boot disk.
+
+---
 
 ![image-20210925144310507](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925144310507.png)
 
-You can create a new disk from custom and public images and snapshots. Alternatively you can attach a disk you have created earlier but didn't attach to another VM. The focus here is on creating new disks from public images.
+---
+
+You can create a new disk from custom and public images and snapshots. Alternatively you can attach a disk you have created earlier but didn't attach to another VM. 
+
+The focus here is on creating new disks from public images.
 
 When going with a public image, you can choose from a range of Linux and Windows operating systems. Keep in mind that some OS are not free !
 
@@ -89,9 +101,42 @@ The available disk types are:
 3. SSD persistent disk
 4. Standard persistent disk
 
-Again, we will go into more details in the respective chapter about block storage. Clicking on "Show Advanced Configuration" allows you to decide whether the disk should be deleted if the attached VM is deleted, who manages encryption keys and if you want to give the disk a name
+Again, we will go into more details in the respective chapter about block storage. 
+
+---
 
 ![image-20210925191409546](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925191409546.png)
+
+---
+
+Clicking on "Show Advanced Configuration" in the public image tab of the boot disk configuration allows you to decide whether...
+
+* the disk should be deleted if the attached VM is deleted, this can be changed later
+* who manages encryption keys
+* if you want to create regular backups of your disk
+*  and if you want to give the disk a custom name
+
+
+
+
+
+
+
+## Compute Engine Free Tier
+
+The free tier for compute engine currently (2021-09-27) consists of the following:
+
+> | 1 non-preemptible `e2-micro` VM instance per month in one of the following US regions:Oregon: `us-west1`Iowa: `us-central1`South Carolina: `us-east1`30 GB-months standard persistent disk 5 GB-month snapshot storage in the following regions:Oregon: `us-west1`Iowa: `us-central1`South Carolina: `us-east1`Taiwan: `asia-east1`Belgium: `europe-west1`1 GB network egress from North America to all region destinations (excluding China and Australia) per month |
+> | ------------------------------------------------------------ |
+> | Your Free Tier `e2-micro` instance limit is by time, not by instance. Each month, eligible use of all of your `e2-micro` instance is free until you have used a number of hours equal to the total hours in the current month. Usage calculations are combined across the supported [regions](https://cloud.google.com/compute/docs/regions-zones).Google Cloud Free Tier does not include external IP addresses.GPUs and TPUs are not included in the Free Tier offer. You are always charged for GPUs and TPUs that you add to VM instances. |
+
+* Source: <a name="compute-free-tier-back" href=#compute-free-tier>[5]</a> 
+
+Please double-check if this is still accurate and open an issue on github if it is not.
+
+## Billing of Compute Engine
+
+Depending on VM configuration per second
 
 ## Hands On: Create VMs
 
@@ -109,7 +154,7 @@ You can read the details of each command with all possible flags in the official
 | gcloud compute instances set-disk-auto-delete --zone=ZONE VM_NAME | Turn off auto-delete for the boot disk of the given VM |
 |                                                              |                                                        |
 
-
+### Bash commands
 
 ## Disks, Snapshots and Images
 
@@ -117,7 +162,7 @@ You can read the details of each command with all possible flags in the official
 
 ## Quiz
 
-1. What factors influencing the cost of virtual machines do you set during creation ? See [1] for the solution.
+1. What factors influencing the cost of virtual machines do you set during creation ? See [1] for hints.
 
 ## References
 
@@ -125,4 +170,5 @@ You can read the details of each command with all possible flags in the official
 2. Machine Family Categories : [https://cloud.google.com/compute/docs/machine-types#machine_types](https://cloud.google.com/compute/docs/machine-types#machine_types)
 3. Machine Series Comparison: [https://cloud.google.com/compute/docs/machine-types#machine_type_comparison](https://cloud.google.com/compute/docs/machine-types#machine_type_comparison)
 4. Enabling virtual displays : https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display
+5. <a name="compute-free-tier" href=#compute-free-tier-back> Compute Free Tier </a> : https://cloud.google.com/free/docs/gcp-free-tier/#compute
 
