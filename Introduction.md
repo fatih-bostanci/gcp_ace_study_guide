@@ -9,18 +9,26 @@
    * VMs
    * Instance Groups
    * Networks, firewalls
-   * Kubernetes clusters
 3. App hosting
    * App engine: standard and flexible
    * Cloud functions
    * Cloud run
-   * App hosting on Compute engine and Kubernetes Engine
+   * App hosting on Compute engine
+   * Kubernetes
+   * CI/CD: Cloud Repo, Cloud Build, Deployment Manager
+   * Microservices: Instance Group vs App Engine vs GKE
 4. Section: Storage options
    * Block Storage
    * File Storage
    * Object Storage 
    * Caches
 5. Section: Databases
+   * Overview
+   * Cloud SQL
+   * Cloud Spanner
+   * BigTable
+   * DataStore
+   * BigQuery
 6. Section: Software as a service in GCP
 
 

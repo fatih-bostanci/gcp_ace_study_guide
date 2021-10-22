@@ -19,11 +19,11 @@ We will show how VMs work on GCP by going through the creation process on the co
 
 Go to: **Navigation > Compute Engine > VM instances > Create instance**
 
-![goto_vm_instances](C:\Users\fatih.bostanci\Desktop\GCP_ACE_Unofficial_Study_Guide\Gifs\goto_vm_instances.gif) 
+![goto_vm_instances](Gifs/goto_vm_instances.gif) 
 
 ### Name, Labels, Region, Zone, Machine Configuration
 
-![image-20210918182503837](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210918182503837.png)
+![image-20210918182503837](Images/image-20210918182503837.png)	
 
 ---
 
@@ -52,7 +52,7 @@ Clicking on **CPU platform and GPU** expands further configuration options
 
 ---
 
-![image-20210920152913842](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210920152913842.png)
+![image-20210920152913842](Images/image-20210920152913842.png)
 
 ---
 
@@ -60,7 +60,7 @@ Depending on the **machine type** you may further specify the micro-architecture
 
 ---
 
-![image-20210920153736586](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210920153736586.png)
+![image-20210920153736586](Images/image-20210920153736586.png)
 
 ---
 
@@ -72,7 +72,7 @@ You can also provide a container image. We will talk more about containers in th
 
 ---
 
-![image-20210920154310306](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210920154310306.png)
+![image-20210920154310306](Images/image-20210920154310306.png)
 
 ---
 
@@ -82,7 +82,7 @@ Clicking on *"change"* lets you configure your boot disk.
 
 ---
 
-![image-20210925144310507](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925144310507.png)
+![image-20210925144310507](Images/image-20210925144310507.png)
 
 ---
 
@@ -105,7 +105,7 @@ Again, we will go into more details in the respective chapter about block storag
 
 ---
 
-![image-20210925191409546](C:\Users\fatih.bostanci\AppData\Roaming\Typora\typora-user-images\image-20210925191409546.png)
+![image-20210925191409546](Images/image-20210925191409546.png)
 
 ---
 
