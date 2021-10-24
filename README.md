@@ -14,7 +14,9 @@
   - [ ] What is a VM
   - [ ] Instance templates
   - [ ] Disks, Snapshots, Images
-  - [ ] Hands On qwiklabs
+  - [ ] Hands On 
+    - [ ] qwiklabs
+    - [ ] Setup gaming rig on gcp
 - [ ] Virtual Networks including Networking 101
   - [ ] Virtual Nets and Subnets, Cidr ranges
   - [ ] Cloud Router
@@ -88,3 +90,6 @@
 
   - [ ] Vision
   - [ ] Translation
+- [ ] Running Examples
+
+    - [ ] Microservice oriented Youtube clone hosted on GCP: Docker, Terraform, Kubernetes
